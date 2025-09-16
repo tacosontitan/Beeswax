@@ -1,0 +1,73 @@
+<Project>
+
+    <PropertyGroup Label="General Project Details">
+        <TargetFrameworks>
+            net4.8;
+            net6.0;
+            net7.0;
+            net8.0;
+        </TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>true</ImplicitUsings>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+        <Title>$(AssemblyName)</Title>
+        <Version>$(AssemblyVersion)</Version>
+        <FileVersion>$(AssemblyVersion)</FileVersion>
+        <PackageVersion>$(AssemblyVersion)</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Package Details">
+        <Description>Beeswax is a lightweight and extensible library for creating infrastructure agnostic data interactions; providing common interfaces for data operations and promoting encapsulation of commands and queries to enhance maintainability and testability.</Description>
+        <PackageTags>
+            beeswax;bee;wax;
+            proxy;facade;
+            orm;object;relational;mapper;
+            infrastructure;agnostic;
+            sql;lite;no;mongo;db;cosmos;redis;io;file;memory;
+            data;interaction
+        </PackageTags>
+
+        <Authors>tacosontitan</Authors>
+        <Copyright>Copyright © 2025 tacosontitan and contibutors</Copyright>
+        <PackageProjectUrl>https://github.com/tacosontitan/Beeswax</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReleaseNotesFile>resources/docs/RELEASE_NOTES.md</PackageReleaseNotesFile>
+
+        <IncludeSymbols>True</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/tacosontitan/Beeswax</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>.resources\LICENSE</Link>
+        </None>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>.resources\docs\README.md</Link>
+        </None>
+        <None Include="..\..\resources\docs\RELEASE_NOTES.md">
+            <Pack>False</Pack>
+            <Link>.resources\docs\RELEASE_NOTES.md</Link>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="PolySharp" Version="1.14.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+</Project>
